@@ -3,7 +3,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 7rem;
+    
 }
 h1{
     margin-top: 2rem;
@@ -118,4 +118,45 @@ main{
     font-weight: 700;
     background-color: #FF79C6;
 }
+
+@media (max-width: 1300px){
+    .image{
+        width: 50rem;
+    }
+
+    .div-form{
+        width: 40rem;
+    }
+    .input-name, .button-play{
+        width: 30rem;
+    }
+}
+
+
+
+
+@media (max-width: 750px){
+    .image{
+        width: 35rem;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .div-form{
+        width: 40rem;
+    }
+    .input-name, .button-play{
+        width: 30rem;
+    }
+
+    body{
+        margin: 0px;
+    }
+}
+
+
 
