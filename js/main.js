@@ -3,14 +3,26 @@ import { indexController } from "./controller/indexController.js"
 let index = new indexController()
 let menuComConteudo = document.querySelector('.menu-with-content')
 let menuSemConteudo = document.querySelector('.menu-which-content')
+let abrirModoDaltonico = document.querySelector('.lineThree')
+let fecharModoDaltonico = document.querySelector('.x')
 
-menuComConteudo.addEventListener('click', function(){
-    console.log("Estou desativando o conteúdo")
+
+menuComConteudo.addEventListener('click', ()=>{
     index.desativarMenu()
-
 })
 
-menuSemConteudo.addEventListener('click', function(){
-    console.log('Estou desativando o conteúdo')
+menuSemConteudo.addEventListener('click', ()=>{
     index.ativarMenu()
+})
+
+abrirModoDaltonico.addEventListener('click', () =>{
+    index.modoDaltonico()
+})
+
+fecharModoDaltonico.addEventListener('click', ()=>{
+    index.modoDaltonico()
 } )
+
+
+
+
