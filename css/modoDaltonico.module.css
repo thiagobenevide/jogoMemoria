@@ -1,0 +1,87 @@
+.modoDaltonico{
+    position: absolute;
+    margin: auto;
+    background-color: var(--backgroudColorSecundary);
+    width: 50rem;
+    height: 30rem;
+    z-index: 15;
+    border-radius: 50px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.462);
+
+}
+
+.buttonStatus{
+    background-color: var(--backgroudColorTerceary);
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-weight: 800;
+    color: var(--colorFontSecundary);
+    padding: 1rem;
+    border-radius: 20px;
+    border: 0;
+    font-size: 1.8rem;    
+}
+
+.buttonStatus:hover{
+    background-color: #ff79c5bc;
+}
+
+
+.modoDaltonico > div{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       gap: 12.2rem;
+}
+
+.modoDaltonico > p{
+    color: var(--colorFontSecundary);
+    
+}
+
+li{
+    transition: transform 0.3s;
+}
+
+li:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+a{
+    transition: transform 0.3s;
+}
+
+a:hover{
+    color: var(--colorFontPrincipal);
+    transform: scale(1.2);
+}
+
+.x{
+    transition: transform 0.3s;
+}
+
+.x:hover{
+    cursor: pointer;
+    transform: scale(1.4);
+}
+
+
+.background{    
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.464) ;
+}
