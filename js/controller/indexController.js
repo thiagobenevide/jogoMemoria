@@ -1,3 +1,5 @@
+import { Game } from "./gameController.js"
+
 export class indexController{
     _menuWithContent
     _menuWhichContent
@@ -30,22 +32,18 @@ export class indexController{
 
     controller(){
         this._menuWithContent.addEventListener('click', ()=>{
-            console.log("Menu com conteúdo")
             this.disableMenu()
         })
         
         this._menuWhichContent.addEventListener('click', ()=>{
-            console.log("Menu sem conteúdo")
             this.activeMenu()
         })
         
         this._openModeDaltonic.addEventListener('click', () =>{
-            console.log("Abrir modo Daltonico")
             this.modeDaltonic()
         })
         
         this._closeModeDaltonic.addEventListener('click', ()=>{
-            console.log("Fechar modo Daltonico")
             this.modeDaltonic()
         } )
 
@@ -67,8 +65,7 @@ export class indexController{
         this._menuWithContent.style = 'display: grid'
 //        this._header.style = 'backdrop-filter: blur(10px)'
 //        this._main.style = 'backdrop-filter: blur(10px)'
-        //this._menuComConteudo.style = 'animation: rigthForLeft 2s ease-in-out 0s infinite'
-        
+//        this._menuComConteudo.style = 'animation: rigthForLeft 2s ease-in-out 0s infinite'
     }
 
     disableMenu(){
@@ -109,6 +106,8 @@ export class indexController{
     setPlayer(event){
         event.preventDefault()
         localStorage.setItem('player', this._input.value)
-    }
+        window.location.href = '../../pages/game.html'
 
+
+    }
 }
