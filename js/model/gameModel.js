@@ -1,10 +1,12 @@
+
+
 export class gameModel{
-    _grid
-    _characters
+    grid
+    _characters = []
     _shuffledArray = []
 
     constructor(){
-        this._grid = document.getElementsByClassName('grid')
+        this.grid = document.querySelector('.grid')
         //var grid = document.querySelector('grid')
         this._characters = [
             'character01',
@@ -43,11 +45,10 @@ export class gameModel{
         this._shuffledArray = duplicateCharacters.sort(()=> Math.random()-0.5)
         this._shuffledArray.forEach(
             (character)=>{
-                var card = this.createCard(character)
-                this._grid.item.toString
-                
-
-                
+                const card = this.createCard(character)
+                console.log(card)
+                console.log(this.grid)
+                this.grid.appendChild(this.createCard(character))
                 
             }
         )

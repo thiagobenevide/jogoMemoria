@@ -1,5 +1,3 @@
-import { Game } from "./gameController.js"
-
 export class indexController{
     _menuWithContent
     _menuWhichContent

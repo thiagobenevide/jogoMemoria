@@ -17,15 +17,15 @@ main {
     background-color: rgba(255, 255, 255, 0.8);
     font-size: 1.2em;
     width: 100%;
-    max-width: 800px;
+    
     padding: 30px;
-    margin: 0 0 30px;
+    margin: 0 0 30px 0px;
     border-radius: 5px;
   }
   
   .grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 15px;
     width: 100%;
     max-width: 1200px;
@@ -39,7 +39,9 @@ main {
     position: relative;
     transition: all 400ms ease;
     transform-style: preserve-3d;
-    background-color: #ccc;
+    background-color: var(--backgroudColorSecundary);
+    border-radius: 20px;
+    border: 5px solid var(--backgroudColorPrimary);
   }
   
   .face {
@@ -48,21 +50,24 @@ main {
     position: absolute;
     background-size: cover;
     background-position: center;
-    border: 5px solid #00b5cc;
-    border-radius: 5px;
+    border: 5px solid var(--backgroudColorSecundary);
+    border-radius: 20px;
     transition: all 400ms ease;
   }
   
   .front {
     transform: rotateY(180deg);
+    
   }
   
   .back {
     background-color: aliceblue;
     backface-visibility: hidden;
+    background-image: url('../image/fundodasCartas.png');
+    border-radius: 20px;
   }
 
-  .back:hover{
+  .reveal-card{
     transform: rotateY(180deg);
   }
   
