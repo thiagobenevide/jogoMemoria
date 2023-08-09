@@ -10,6 +10,7 @@ export class indexController{
     _openModeDaltonic 
     _closeModeDaltonic 
     _buttonPlay
+    _html
 //    _main
 //    _header
     _input
@@ -27,6 +28,7 @@ export class indexController{
 //        this._main = document.querySelector('.main')
  //       this._header = document.querySelector('.header')
         this._input = document.querySelector('.input-name')
+        this._html = document.querySelector('body')
 
     }
 

@@ -1,0 +1,89 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--backgroudColorSecundary);
+    border-radius: 0px 0px 20px 20px;
+    padding: 20px;
+}
+
+img{
+    width: 45rem;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.container{
+    background-color: var(--backgroudColorSecundary);
+    width: 500px;
+    height: 300px;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+.phrasy{
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--colorFontSecundary);
+}
+
+.player{
+    font-size: 4rem;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--colorFontPrincipal);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.button{
+    color: var(--colorFontSecundary);
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    font-weight: 700;
+    outline: none;
+    border: 0;
+    transition: transform 0.3s;
+    padding: 5px;
+    width: 200px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.button:hover{
+    transform: scale(1.1);
+    background-color: var(--backgroudColorQuitenary);
+}
+
+.tryAgain{
+    background-color: var(--backgroudColorTerceary);
+}
+
+.menu{
+    background-color: var(--backgroudColorPrincipal);
+}
+.menu:hover{
+    background-color: var(--backgroudColorSectenary);
+}
+  

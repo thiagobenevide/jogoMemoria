@@ -30,7 +30,7 @@
 }
 
 .buttonStatus:hover{
-    background-color: #ff79c5bc;
+    background-color: var(--colorFontLigth);
 }
 
 
@@ -59,7 +59,7 @@ a{
 }
 
 a:hover{
-    color: var(--colorFontPrincipal);
+    color: var(--colorFontLigth);
     transform: scale(1.2);
 }
 

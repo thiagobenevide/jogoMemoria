@@ -9,7 +9,7 @@
 
 
 .menu-with-content{
-    background-color: #383A59;
+    background-color: var(--backgroudColorSecundary);
     display: none;
     flex-direction: column;
     right: 0;
@@ -19,10 +19,12 @@
     width: 50rem;
     height: 100%;
     border-radius: 2rem 0rem 0rem 2rem;
+
 }
 
 .menu-which-content{
     display: block;
+    cursor: pointer;
 }
 
 .menu-organization{
@@ -38,12 +40,13 @@
     height: 30px;
     margin-top: 2rem;
     margin-right: 2rem;
+    cursor: pointer;
     
 }
 
 
 .one,.two,.three {
-    background-color: #fff;
+    background-color: var(--backgroudColorSextenary);
     height: 5px;
     width: 100%;
     margin: 6px auto;

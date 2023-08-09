@@ -1,6 +1,12 @@
 const grid = document.querySelector('.grid')
+const targetDate = new Date()
+targetDate.setMinutes(targetDate.getMinutes() + 1)
 let player = document.querySelector('.player')
 let timer = document.querySelector('.timer')
+let exitButton = document.querySelector('.exit')
+let playGame = localStorage.getItem('player')
+
+
 const characters = [
 'character01',
 'character02',
@@ -33,6 +39,7 @@ function createCard(character){
     return card
 }
 
+//Carrega os elementos na página
 function loadGame(){
     const duplicateCharacters = [...characters, ...characters]
     var shuffledArray = []
@@ -51,6 +58,8 @@ function loadGame(){
     )
 }
 
+
+//Validação das cartas
 let firstCard=''
 let secondCard=''
 
@@ -73,9 +82,11 @@ const revealCard = ({target}) =>{
 const checkCards = ()=>{
     const firstCharacter = firstCard.getAttribute('data-character')
     const secondCharacter = secondCard.getAttribute('data-character')
+
     if(firstCharacter===secondCharacter){
         firstCard.firstChild.classList.add('disabled-card')
         secondCard.firstChild.classList.add('disabled-card')
+
         firstCard = ''
         secondCard = ''
         endGame()
@@ -87,7 +98,6 @@ const checkCards = ()=>{
             secondCard = ''
         },800)
 
-        
     }
 }
 
@@ -98,16 +108,36 @@ const endGame = () =>{
     }
 }
 
-const startTimer = ()=>{
-    setInterval(() => {
-        let currentTime =Number(timer.innerHTML) 
-        timer.innerHTML= currentTime + 1
-    },1000)
+const exit = ()=>{
+    exitButton.addEventListener('click',()=>{
+        window.location.href = '../../index.html'
+    })
 }
 
+//Define o tempo do jogo
+const startTimer = ()=>{
+    //    setInterval(() => {
+    //        let currentTime =Number(timer.innerHTML) 
+    //        timer.innerHTML= currentTime + 1
+    //    },1000)
+        const now  = new Date()
+        const timeDiference = targetDate - now
+        
+        if(timeDiference > 0){
+            const minutes = Math.floor(timeDiference/(1000*60))
+            const seconds = Math.floor((timeDiference % (1000*60))/1000)
+            timer.innerHTML = `${minutes}:${seconds}` 
+        }else if(timeDiference < 1){
+            window.location.href = '/pages/youLoser.html'
+        }
+    }
+
 window.onload = () =>{
-    let playGame = localStorage.getItem('player')
     player.innerHTML = playGame
-    startTimer()
+    //startTimer()
     loadGame()
+    exit()
+    startTimer()
+    const interval = setInterval(startTimer, 1000)
+    
 }
