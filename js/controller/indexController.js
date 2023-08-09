@@ -1,3 +1,5 @@
+
+
 export class indexController{
     _menuWithContent
     _menuWhichContent
@@ -105,7 +107,6 @@ export class indexController{
         event.preventDefault()
         localStorage.setItem('player', this._input.value)
         window.location.href = '../../pages/game.html'
-
 
     }
 }

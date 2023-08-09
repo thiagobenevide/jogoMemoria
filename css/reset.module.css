@@ -24,8 +24,10 @@
     
 }
 
+
 html {
 	font-size: 62.5%;
+    height: 100vh;
 }
 
 .div-principal{
@@ -38,6 +40,7 @@ body {
 	font-size: 1.6rem;
     background-color: var(--backgroudColorPrincipal);
     z-index: 0;
+    height: 100vh;
 }
 
 h1, h2,h3, p{
@@ -49,4 +52,20 @@ h1, h2,h3, p{
 a{
     font-family: 'Poppins';
     color: var(--colorFontSecundary);
+}
+
+::-webkit-scrollbar {
+width: 5px; /* Largura da barra de rolagem */
+}
+
+/* Altera a aparência do polegar da barra de rolagem */
+::-webkit-scrollbar-thumb {
+background-color: var(--backgroudColorTerceary); /* Cor do polegar */
+border-radius: 10px; /* Raio das bordas do polegar */
+}
+
+/* Altera a cor quando o polegar da barra de rolagem é hover ou ativo */
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
+background-color: #737373;
 }
