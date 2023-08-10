@@ -1,3 +1,6 @@
+import { controller, enableDaltonicMode } from "./modeDaltonicController.js"
+
+
 export class indexController{
     _menuWithContent
     _menuWhichContent
@@ -50,6 +53,22 @@ export class indexController{
             this.setPlayer(event)
         })
 
+        this._buttonStatus.addEventListener('click', ()=>{
+            var statusClick = localStorage.getItem('statusClick')
+            if(statusClick == true){
+                console.log('Status click true')
+                localStorage.setItem('statusClick', false)
+                localStorage.setItem('statusModeDaltonic', true)
+                enableDaltonicMode()
+            }else{
+                localStorage.setItem('statusClick', true)
+                localStorage.setItem('statusModeDaltonic', false)
+                enableDaltonicMode()
+            }
+            
+        })
+        controller()
+
         this.validadeInput()
 
 
@@ -77,14 +96,6 @@ export class indexController{
             this._statuspoppup = false
         }
     }
-
-   
-    
-
-  
-    
-
-
     validadeInput(){
         let text = this._input.value.trim()
         if(text.length > 2){
@@ -102,4 +113,6 @@ export class indexController{
         window.location.href = '../../pages/game.html'
 
     }
+    
 }
+
