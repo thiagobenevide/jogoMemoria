@@ -1,35 +1,28 @@
-
-
 export class indexController{
     _menuWithContent
     _menuWhichContent
     _statuspoppup
     _background
     _buttonStatus
-    _buttonContent
+    _statusModeDaltonic
     _openModeDaltonic 
     _closeModeDaltonic 
     _buttonPlay
     _html
-//    _main
-//    _header
     _input
 
     constructor(){
         this._menuWithContent = document.querySelector(".menu-with-content")
         this._menuWhichContent = document.querySelector(".menu-which-content")
         this._background = document.querySelector(".background")
-        this._buttonContent = document.querySelector('.buttonStatus')
-        this._statuspoppup = false    
-        this.buttonStatus = false
+        this._buttonStatus = document.querySelector('.buttonStatus')
+        this._statuspoppup = false
+        this._statusModeDaltonic = false
         this._openModeDaltonic = document.querySelector('.lineThree')
         this._closeModeDaltonic = document.querySelector('.x')
         this._buttonPlay = document.querySelector('.button-play')
-//        this._main = document.querySelector('.main')
- //       this._header = document.querySelector('.header')
         this._input = document.querySelector('.input-name')
         this._html = document.querySelector('body')
-
     }
 
     controller(){
@@ -56,7 +49,9 @@ export class indexController{
         this._buttonPlay.addEventListener('click', (event)=>{
             this.setPlayer(event)
         })
+
         this.validadeInput()
+
 
         
     }
@@ -65,9 +60,6 @@ export class indexController{
         console.log("Ativar menu")
         this._menuWhichContent.style = 'display: none'
         this._menuWithContent.style = 'display: grid'
-//        this._header.style = 'backdrop-filter: blur(10px)'
-//        this._main.style = 'backdrop-filter: blur(10px)'
-//        this._menuComConteudo.style = 'animation: rigthForLeft 2s ease-in-out 0s infinite'
     }
 
     disableMenu(){
@@ -86,13 +78,12 @@ export class indexController{
         }
     }
 
-    statusModoDaltonico(){
-        if(this._buttonStatus == false){            
-            this.buttonStatus = true
-        }else{
-            this.buttonStatus = false
-        }
-    }
+   
+    
+
+  
+    
+
 
     validadeInput(){
         let text = this._input.value.trim()
