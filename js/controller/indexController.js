@@ -1,4 +1,20 @@
-import { controller, enableDaltonicMode } from "./modeDaltonicController.js"
+import { colorDisable, colorEnable } from "./modeDaltonicController.js"
+
+window.onload = () =>{
+    let statusClick = localStorage.getItem('statusClick')
+    let nameButton = localStorage.getItem('nameButton')
+    let statusModeDaltonic = localStorage.getItem('statusModeDaltonic')
+    let button = document.querySelector('.buttonStatus')
+    console.log(button)
+    if(statusClick == null || nameButton == null || statusModeDaltonic == null){
+        localStorage.setItem('statusClick', 'desativado')
+        localStorage.setItem('nameButton', 'Ativar')
+        localStorage.setItem('statusModeDaltonic', 'desativado')
+    }else if(statusClick == 'ativado' && nameButton == 'Desativar' && statusModeDaltonic == 'ativado'){
+        colorEnable()
+        button.innerHTML = 'Desativar'
+    }
+}
 
 
 export class indexController{
@@ -54,20 +70,8 @@ export class indexController{
         })
 
         this._buttonStatus.addEventListener('click', ()=>{
-            var statusClick = localStorage.getItem('statusClick')
-            if(statusClick == true){
-                console.log('Status click true')
-                localStorage.setItem('statusClick', false)
-                localStorage.setItem('statusModeDaltonic', true)
-                enableDaltonicMode()
-            }else{
-                localStorage.setItem('statusClick', true)
-                localStorage.setItem('statusModeDaltonic', false)
-                enableDaltonicMode()
-            }
-            
+            this.validadeDaltonic()
         })
-        controller()
 
         this.validadeInput()
 
@@ -112,6 +116,35 @@ export class indexController{
         localStorage.setItem('player', this._input.value)
         window.location.href = '../../pages/game.html'
 
+    }
+
+    validadeDaltonic(){
+        let statusClick = localStorage.getItem('statusClick')
+        let nameButton = localStorage.getItem('nameButton')
+        let statusModeDaltonic = localStorage.getItem('statusModeDaltonic')
+        let button = document.querySelector('.buttonStatus')
+        let img = document.querySelector('.image')
+        let imgDal = document.querySelector('.imgDaltonic')
+
+        if(statusClick == null || nameButton == null || statusModeDaltonic == null){
+            localStorage.setItem('statusClick', 'desativado')
+            localStorage.setItem('nameButton', 'Ativar')
+            localStorage.setItem('statusModeDaltonic', 'desativado')
+        }else if(statusClick == 'desativado' && nameButton == 'Ativar' && statusModeDaltonic == 'desativado'){
+            colorEnable()
+          
+            localStorage.setItem('statusClick', 'ativado')
+            localStorage.setItem('nameButton', 'Desativar')
+            localStorage.setItem('statusModeDaltonic', 'ativado')
+            button.innerHTML = 'Desativar'
+        }else if(statusClick == 'ativado' && nameButton == 'Desativar' && statusModeDaltonic == 'ativado'){
+            colorDisable()
+            
+            localStorage.setItem('statusClick', 'desativado')
+            localStorage.setItem('nameButton', 'Ativar')
+            localStorage.setItem('statusModeDaltonic', 'desativado')
+            button.innerHTML = 'Ativar'
+        }
     }
     
 }

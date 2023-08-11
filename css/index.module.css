@@ -43,6 +43,11 @@ main{
     
 }
 
+.imageDaltonic{
+    width: 52rem;
+    filter: saturate(0);
+}
+
 
 .div-form{
     background-color: var(--backgroudColorSecundary);

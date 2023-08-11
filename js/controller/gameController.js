@@ -104,7 +104,7 @@ const checkCards = ()=>{
 const endGame = () =>{
     const disabledCads = document.querySelectorAll('.disabled-card')
     if(disabledCads.length === 18){
-        window.location.href = '../../pages/fimDeJogo.html'
+        window.location.href = '../../pages/youWin.html'
     }
 }
 
@@ -132,6 +132,7 @@ const startTimer = ()=>{
         }
     }
 
+
 window.onload = () =>{
     player.innerHTML = playGame
     //startTimer()
@@ -139,5 +140,4 @@ window.onload = () =>{
     exit()
     startTimer()
     const interval = setInterval(startTimer, 1000)
-    
 }
