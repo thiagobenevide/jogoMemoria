@@ -1,4 +1,4 @@
-/*const grid = document.querySelector('.grid')
+const grid = document.querySelector('.grid')
 const targetDate = new Date()
 targetDate.setMinutes(targetDate.getMinutes() + 1)
 let player = document.querySelector('.player')
@@ -140,22 +140,5 @@ export function load(){
     exit()
     startTimer()
     const interval = setInterval(startTimer, 1000)
-
-}
-*/
-
-import { GameModel } from "../model/gameModel.js"
-
-export class GameController{
-    gameModel
-
-    constructor(){
-        this.gameModel = new GameModel()
-        this.controller()
-    }
-    
-    controller(){
-       this.gameModel.load()
-    }
 
 }

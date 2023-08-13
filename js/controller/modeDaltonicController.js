@@ -31,13 +31,28 @@ export function enableDaltonicMode(){
 
 export function colorEnable(){
     var styleSheets = document.styleSheets[0]
+    var img = document.querySelectorAll('img')
+    var classImg = document.querySelectorAll('.back')
     console.log(styleSheets)
     styleSheets.insertRule(':root {  --colorFontPrincipal: #fff;--colorFontSecundary: #8C8C8C;  --colorFontLigth: #c5c1c1;--backgroudColorPrincipal: #131313;--backgroudColorSecundary: #2e2e2e;--backgroudColorTerceary: #6d6d6d;  --backgroudColorQuartenary: #8C8C8C; --backgroudColorQuitenary: #585858;  --backgroudColorSextenary: #fff;--backgroudColorSectenary: #131313;}', styleSheets.cssRules.length)
+    img.forEach(image =>{
+        image.style.filter = 'grayscale(100%)'
+    })
+
+    classImg.forEach(image => {
+        image.style.filter = 'grayscale(100%)'
+    })
+
 }
 
 export function colorDisable(){
     var styleSheets = document.styleSheets[0]
+    var img = document.querySelectorAll('img')
     styleSheets.insertRule(':root {  --colorFontPrincipal: #FF79C6;--colorFontSecundary: #fff;  --colorFontLigth: #8C8C8C;--backgroudColorPrincipal: #282942;--backgroudColorSecundary: #383A59;--backgroudColorTerceary: #FF79C6;  --backgroudColorQuartenary: #8C8C8C; --backgroudColorQuitenary: #b3548a; --backgroudColorSextenary: #fff;--backgroudColorSectenary: #1d1e30;}', styleSheets.cssRules.length)
+    img.forEach(image =>{
+        image.style.filter = 'none'
+    })
+
 
 }
 
