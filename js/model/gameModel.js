@@ -144,6 +144,10 @@ export class GameModel{
         }
     }
 
+    loadModeDaltonic(){
+        
+    }
+
     load(){
         this.player.innerHTML = this.playGame
         //startTimer()

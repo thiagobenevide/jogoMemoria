@@ -7,6 +7,13 @@ header{
     padding: 20px;
 }
 
+html{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 img{
     width: 45rem;
 }
@@ -17,6 +24,10 @@ main{
     align-items: center;
     justify-content: space-between;
     margin: 50px;
+}
+
+body{
+    max-width: 1920px;
 }
 
 .container{
@@ -87,3 +98,12 @@ h1{
     background-color: var(--backgroudColorSectenary);
 }
   
+@media (max-width: 1050px){
+ 
+    img{
+        width: 30rem;
+    }
+
+ 
+
+}

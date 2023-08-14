@@ -51,5 +51,19 @@ export class ModeDalonicModel{
             }
         }
     }
+
+    loadDaltonic(){
+        this.statusClick = localStorage.getItem('statusClick')
+        this.statusModeDaltonic = localStorage.getItem('statusModeDaltonic')
+ 
+        if(this.statusClick == null || this.statusModeDaltonic == null){
+            this.colorDisable()           
+        }else if(this.statusClick == 'desativado' && this.statusModeDaltonic == 'desativado'){
+            this.colorDisable()
+        }else if(this.statusClick == 'ativado' && this.statusModeDaltonic == 'ativado'){
+            this.colorEnable()
+        }
+
+    }
     
 }
