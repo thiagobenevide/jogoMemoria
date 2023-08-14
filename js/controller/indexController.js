@@ -1,6 +1,4 @@
 import { IndexModel } from "../model/indexModel.js"
-import { ModeDalonicModel } from "../model/modeDaltonicModel.js"
-import { colorDisable, colorEnable } from "./modeDaltonicController.js"
 /*
 window.onload = () =>{
     let statusClick = localStorage.getItem('statusClick')
@@ -191,13 +189,10 @@ export class IndexController{
         })
 
         this.indexModel.buttonStatus.addEventListener('click', ()=>{
+            console.log('Alterar status modo daltonico')
             this.indexModel.validadeDaltonic()
         })
 
-        this.indexModel.validadeInput()
-        this.indexModel.validadeDaltonic()
-
-
-        
+        this.indexModel.validadeInput()  
     }
 }

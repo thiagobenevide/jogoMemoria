@@ -1,3 +1,4 @@
+/*
 const controlerVariables = ()=>{
     let statusClick = localStorage.getItem('statusClick')
     let statusModeDaltonic =  localStorage.getItem('statusModeDaltonic')
@@ -69,5 +70,15 @@ function observer(){
         colorDisable()
     }
 }
+*/
 
+import { ModeDalonicModel } from "../model/modeDaltonicModel.js"
+
+export class ModeDaltonicController{
+    modeDaltonicModel
+
+    constructor(){
+        this.modeDaltonicModel = new ModeDalonicModel()
+    }
+}
 

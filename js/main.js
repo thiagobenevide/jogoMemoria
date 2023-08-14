@@ -6,7 +6,10 @@ let url = window.location.pathname
 
 switch (url){
     case '/index.html':
-        new IndexController()
+        let index = new IndexController()
+        window.onload = () => {
+            index.indexModel.load()
+        }
         break
     case '/pages/game.html':
         new GameController()

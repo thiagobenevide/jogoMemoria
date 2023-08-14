@@ -14,13 +14,12 @@ export class EndGameModel{
     tryAgain = () =>{
         this.tryAgainButton.addEventListener('click', ()=>{
             window.location.href = 'game.html'
-    })
-}
+    })}
+
     menu = () => {
         this.menuButton.addEventListener('click', ()=>{
             window.location.href = '../index.html'
-        })
-    }
+    })}
 
     playerGame(){
         this.player.innerHTML = this.namePlayer
