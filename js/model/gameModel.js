@@ -6,10 +6,12 @@ export class GameModel{
     playGame
     characters
     time
+    firstCard
+    secondCard
     constructor(){
         this.grid =  document.querySelector('.grid')
         this.targetDate = new Date()
-        this.targetDate.setMinutes(this.targetDate.getMinutes() + 1)
+        this.targetDate.setMinutes(this.targetDate.getMinutes() + 3)
         
         this.player = document.querySelector('.player')
         this.timer = document.querySelector('.timer')
@@ -142,10 +144,6 @@ export class GameModel{
         }else if(timeDiference < 1){
             window.location.href = '/pages/youLoser.html'
         }
-    }
-
-    loadModeDaltonic(){
-        
     }
 
     load(){

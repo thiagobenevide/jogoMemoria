@@ -6,6 +6,8 @@ export class ModeDalonicModel{
     img
     classImg
     button
+    back
+    front
 
     constructor(){
         this.statusClick = localStorage.getItem('statusClick')
@@ -15,11 +17,13 @@ export class ModeDalonicModel{
         this.classImg = document.querySelectorAll('.back')
         this.nameButton = localStorage.getItem('nameButton')
         this.button = document.querySelector('.buttonStatus')
+        
     }
 
     
     colorEnable(){
-        console.log('Ativando as cores')
+        this.back = document.querySelectorAll('.back')
+        this.front = document.querySelectorAll('.front')
         this.styleSheets.insertRule(':root {  --colorFontPrincipal: #fff;--colorFontSecundary: #8C8C8C;  --colorFontLigth: #c5c1c1;--backgroudColorPrincipal: #131313;--backgroudColorSecundary: #2e2e2e;--backgroudColorTerceary: #6d6d6d;  --backgroudColorQuartenary: #8C8C8C; --backgroudColorQuitenary: #585858;  --backgroudColorSextenary: #fff;--backgroudColorSectenary: #131313;}', this.styleSheets.cssRules.length)
         this.img.forEach(image =>{
             image.style.filter = 'grayscale(100%)'
@@ -28,6 +32,15 @@ export class ModeDalonicModel{
         this.classImg.forEach(image => {
             image.style.filter = 'grayscale(100%)'
         })
+        this.back.forEach(image =>{
+            image.style.filter = 'saturate(0)'
+        })
+
+        this.front.forEach(image => {
+            image.style.filter = 'saturate(0)'
+        })
+
+        
     }
 
     colorDisable(){

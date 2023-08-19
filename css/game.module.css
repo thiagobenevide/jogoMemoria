@@ -1,3 +1,8 @@
+body{
+  height: 100%;
+  outline: hidden;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -29,7 +34,6 @@ header {
   grid-template-columns: repeat(6, 1fr);
   gap: 15px;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
