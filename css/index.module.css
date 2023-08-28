@@ -224,6 +224,15 @@ main{
         
     }
 
+    h1{
+        font-size: 3rem;
+    }
+
+    p{
+        font-size: 2rem;
+        text-align: center;
+    }
+
     .div-form{
         width: 28rem;
         margin-top: 5rem;

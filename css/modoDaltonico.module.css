@@ -78,10 +78,52 @@ a:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     position: absolute;
+    left: 0;
+    position: fixed;
+    top: 0;
+    
     z-index: 10;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.464) ;
+}
+
+@media(max-width: 750px){
+    .modoDaltonico{
+        width: 50rem;
+        height: 40rem;
+    }
+    .modoDaltonico > div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+}
+ 
+ @media(max-width: 490px){
+    .modoDaltonico{
+        width: 35rem;
+        height: 60rem;
+    }
+    .modoDaltonico > div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.5rem;
+     } 
+}
+
+@media(max-width: 320px){
+    .modoDaltonico{
+        width: 30rem;
+        height: 50rem;
+    }
+    .modoDaltonico > div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
 }
